@@ -1,0 +1,22 @@
+name: 'arweave-ens-action'
+description: 'Github action to update ENS content with Arweave hashes'
+inputs:
+  private-key:
+    description: 'Private Key of the account that owns the name'
+    required: true
+  rpc:
+    description: 'RPC Url to use instead of the default Flashbots one, the Network and the corresponding EnsResolver is derived from the RPC Url you use'
+    required: false
+    default: 'https://rpc.flashbots.net'
+  name:
+    description: 'ENS Name, e.g. "name.eth"'
+    required: true
+  hash:
+    description: 'Arweave hash to set as content'
+    required: true
+outputs:
+  tx-hash:
+    description: "Hash of the update content transaction"
+runs:
+  using: 'node16'
+  main: 'dist/index.js'

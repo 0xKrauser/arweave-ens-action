@@ -1,0 +1,6 @@
+dist/
+examples/
+node_modules/
+jest.config.js
+*.js
+__tests__/
