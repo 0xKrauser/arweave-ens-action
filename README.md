@@ -1,4 +1,4 @@
-# bundlr-action
+# arweave-ens-action
 GitHub action to update content for an ENS name with an Arweave transaction hash
 
 ## Basic usage
